@@ -23,7 +23,8 @@ defmodule Issues.MixProject do
   defp deps do
     [
       {:httpoison, "~> 1.5.0"},
-      {:jsx, "~> 2.9.0"}
+      {:jsx, "~> 2.9.0"},
+      {:ex_doc, "~> 0.20.2", only: :dev, runtime: false}
     ]
   end
 
