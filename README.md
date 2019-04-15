@@ -9,9 +9,9 @@ code for modern libraries versions when I was writing the code.
 Clone, get deps, etc.
 
 ```bash
-git clone https://github.com/cr0t/issues.git
-cd issues/
-mix deps.get
+$ git clone https://github.com/cr0t/issues.git
+$ cd issues/
+$ mix deps.get
 ```
 
 ## Run It
@@ -19,7 +19,7 @@ mix deps.get
 You can run it via mix ability to eval the code:
 
 ```bash
-mix run -e 'Issues.CLI.main(["elixir-lang", "elixir", "1"])'
+$ mix run -e 'Issues.CLI.main(["elixir-lang", "elixir", "1"])'
 
 20:06:40.380 [info]  Fetching user elixir-lang's project elixir
 
@@ -32,8 +32,8 @@ numb | created_at           | title
 Or you can build a single binary file and execute it directly:
 
 ```bash
-mix escript.build
-./issues elixir-lang elixir 2
+$ mix escript.build
+$ ./issues elixir-lang elixir 2
 
 20:06:40.380 [info]  Fetching user elixir-lang's project elixir
 
