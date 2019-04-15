@@ -24,3 +24,6 @@ issues-*.tar
 
 # VS Code Elixir extension files
 .elixir_ls
+
+# escript.build artefact
+/issues
