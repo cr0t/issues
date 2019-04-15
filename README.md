@@ -1,21 +1,45 @@
 # Issues
 
-**TODO: Add description**
+GitHub Issues app is my implementation of example app from
+"Programming Elixir" book. As the book got outdated with the time, I adapted
+code for modern libraries versions when I was writing the code.
 
-## Installation
+## Setup
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `issues` to your list of dependencies in `mix.exs`:
+Clone, get deps, etc.
 
-```elixir
-def deps do
-  [
-    {:issues, "~> 0.1.0"}
-  ]
-end
+```bash
+git clone https://github.com/cr0t/issues.git
+cd issues/
+mix deps.get
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/issues](https://hexdocs.pm/issues).
+## Run It
 
+You can run it via mix ability to eval the code:
+
+```bash
+mix run -e 'Issues.CLI.main(["elixir-lang", "elixir", "1"])'
+
+20:06:40.380 [info]  Fetching user elixir-lang's project elixir
+
+20:06:44.209 [info]  Successful response
+numb | created_at           | title
+-----+----------------------+--------------------------------------------------------
+6248 | 2017-06-22T09:41:01Z | Improve ExUnit output for assertions on process mailbox
+```
+
+Or you can build a single binary file and execute it directly:
+
+```bash
+mix escript.build
+./issues elixir-lang elixir 2
+
+20:06:40.380 [info]  Fetching user elixir-lang's project elixir
+
+20:06:44.209 [info]  Successful response
+numb | created_at           | title
+-----+----------------------+--------------------------------------------------------
+6248 | 2017-06-22T09:41:01Z | Improve ExUnit output for assertions on process mailbox
+6611 | 2017-09-28T08:56:29Z | Support Erlang 21 new features
+```
